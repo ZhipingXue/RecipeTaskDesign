@@ -1,10 +1,24 @@
 using System.Collections.Generic;
 
-namespace RecipeTaskQuene
+namespace RecipeTaskQuene.RecipeStruct
 {
-    public abstract class BaseRecipe<T>
-        where T: new()
+    public abstract class BaseRecipe
     {
-        public Dictionary<string,T> properties;
+        Dictionary<string,object> properties;
+    }
+
+    public class Heating:BaseRecipe
+    {
+        public bool HeatingStyle { get; set; }
+    }
+
+    public class PreHeating : BaseRecipe
+    {
+        
+    }
+
+    public class Pressure : BaseRecipe
+    {
+        
     }
 }
